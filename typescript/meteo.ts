@@ -15,4 +15,4 @@ class Meteo {
 
 let nantesCeMatin = new Meteo('Nantes', 12);
 
-console.log(nantesCeMatin.toString())
+console.log(nantesCeMatin.toString());

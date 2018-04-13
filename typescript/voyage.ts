@@ -16,14 +16,6 @@ class Sejour {
 class ServiceSejour {
     constructor(private _sejours:Sejour[]) {
 
-        let s1 = new Sejour('Sejour 1', 100);
-        let s2 = new Sejour('Sejour 2', 200);
-        let s3 = new Sejour('Sejour 3', 300);
-
-        _sejours.push(s1);
-        _sejours.push(s2);
-        _sejours.push(s2);
-
     }
 
     findByName(name:String): Sejour| void {
@@ -34,3 +26,13 @@ class ServiceSejour {
         return this._sejours;
     }
 }
+
+let sejours = [
+    new Sejour('Sejour 1', 100),
+    new Sejour('Sejour 2', 200),
+    new Sejour('Sejour 3', 300)
+];
+
+let serviceSejour = new ServiceSejour(sejours);
+
+console.log(serviceSejour.findByName('Sejour 1'));
